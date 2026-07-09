@@ -1,8 +1,8 @@
 {
-  "name": "hw4",
-  "private": true,
+  "name": "Web Project",
+  "private": false,
   "version": "0.0.0",
-  "homepage": "https://Sgm907.github.io/CS571-Web-Project.git",
+  "homepage": "https://Sgm907.github.io/CS571-Web-Project/",
   "type": "module",
   "scripts": {
     "dev": "vite",
