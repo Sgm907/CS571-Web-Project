@@ -2,11 +2,13 @@
   "name": "hw4",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://Sgm907.github.io/CS571-Web-Project.git",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "deploy": "gh-pages -d disc",
     "preview": "vite preview"
   },
   "dependencies": {
