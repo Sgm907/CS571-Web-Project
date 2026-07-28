@@ -7,19 +7,19 @@ function SiteNavigation(props) {
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">
-                        BadgerChat
+                    <Navbar.Brand as={Link} to="/CS571-Web-Project/">
+                        SplitScreen
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/lore">Lore</Nav.Link>
-                        <Nav.Link as={Link} to="/roadmap">Roadmap</Nav.Link>
-                        <Nav.Link as={Link} to="/feedback">Submit Feedback</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+                        <Nav.Link as={Link} to="/CS571-Web-Project/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/CS571-Web-Project/lore">Lore</Nav.Link>
+                        <Nav.Link as={Link} to="/CS571-Web-Project/roadmap">Roadmap</Nav.Link>
+                        <Nav.Link as={Link} to="/CS571-Web-Project/feedback">Submit Feedback</Nav.Link>
+                        <Nav.Link as={Link} to="/CS571-Web-Project/about">About Us</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
-            <div style={{ margin: "1rem" }}>\
+            <div style={{ margin: "1rem" }}>
                 <Outlet />
             </div>
         </div >
