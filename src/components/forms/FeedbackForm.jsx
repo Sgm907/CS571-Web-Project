@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
+import Style from '../../SiteThemes';
 
 const FeedbackForm = () => {
     const [validated, setValidated] = useState(false);
@@ -17,7 +18,7 @@ const FeedbackForm = () => {
 
     };
     return (
-        <div style={{ backgroundColor: "darkgrey", padding: "2rem", borderRadius: "0.5rem", "textAlign": "left" }}>
+        <div style={Style.DefaultForm}>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="titleFormGroup">
