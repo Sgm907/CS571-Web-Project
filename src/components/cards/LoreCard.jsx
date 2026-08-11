@@ -1,14 +1,13 @@
-import { useState, useRef } from 'react';
-import { Button, Card, Container, OverlayTrigger } from 'react-bootstrap';
+import { useState } from 'react';
+import { Button, Card } from 'react-bootstrap';
 import LoreCardExpanded from './LoreCardExpanded';
 
 function LoreCard(props) {
     const [expand, setExpand] = useState(false);
-    const target = useRef(null);
 
     return (
-        <OverlayTrigger trigger="click" placement="right" overlay={LoreCardExpanded({ ...props, target, setExpand, expand })}>
-            <Button variant="outline-secondary" ref={target}>
+        <>
+            <Button variant="outline-secondary" onClick={() => setExpand(true)}>
                 <Card className="bg-transparent border-0">
                     <Card.Img variant="top" src={props.imageSrc || "../../images/placeholder.png"} />
                     <Card.Body>
@@ -17,7 +16,13 @@ function LoreCard(props) {
                     </Card.Body>
                 </Card>
             </Button>
-        </OverlayTrigger>
+
+            <LoreCardExpanded
+                show={expand}
+                onHide={() => setExpand(false)}
+                {...props}
+            />
+        </>
     );
 }
 
