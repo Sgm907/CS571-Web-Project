@@ -11,27 +11,27 @@ function LorePage() {
             <Row id="cards">
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="The Kingdom" text="The world we're trying to save." imageSrc="src\assets\card1.png" type={LoreTypes.WORLD} charKey={CharacterEnum.WORLD_1} />
+                        <LoreCard title="The Kingdom" text="The world we're trying to save." imageSrc="\assets\card1.png" type={LoreTypes.WORLD} charKey={CharacterEnum.WORLD_1} />
                     </div>
-                    <LoreCard title="The Void" text="Once there was only the void." imageSrc="src\assets\card2.png" type={LoreTypes.WORLD} charKey={CharacterEnum.WORLD_2} />
+                    <LoreCard title="The Void" text="Once there was only the void." imageSrc="\assets\card2.png" type={LoreTypes.WORLD} charKey={CharacterEnum.WORLD_2} />
                 </Col>
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="The Protagonist" text="You" imageSrc="src\assets\card3.png" type={LoreTypes.ALLY} charKey={CharacterEnum.MAIN_CHAR} />
+                        <LoreCard title="The Protagonist" text="You" imageSrc="\assets\card3.png" type={LoreTypes.ALLY} charKey={CharacterEnum.MAIN_CHAR} />
                     </div>
-                    <LoreCard title="The Antagonist" text="The man who destroyed the world" imageSrc="src\assets\card4.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.MAIN_ANT} />
+                    <LoreCard title="The Antagonist" text="The man who destroyed the world" imageSrc="\assets\card4.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.MAIN_ANT} />
                 </Col>
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="Wolves" text="The local wildlife." imageSrc="src\assets\card5.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_1} />
+                        <LoreCard title="Wolves" text="The local wildlife." imageSrc="\assets\card5.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_1} />
                     </div>
-                    <LoreCard title="Void Cultists" text="Followers of the void." imageSrc="src\assets\card6.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_2} />
+                    <LoreCard title="Void Cultists" text="Followers of the void." imageSrc="\assets\card6.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_2} />
                 </Col>
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="Void Bats" text="Flying horrors from the sky." imageSrc="src\assets\card7.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_3} />
+                        <LoreCard title="Void Bats" text="Flying horrors from the sky." imageSrc="\assets\card7.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_3} />
                     </div>
-                    <LoreCard title="Void Tunnels" text="Cross the ruined world." imageSrc="src\assets\card8.png" type={LoreTypes.WORLD} charKey={CharacterEnum.MECH_1} />
+                    <LoreCard title="Void Tunnels" text="Cross the ruined world." imageSrc="\assets\card8.png" type={LoreTypes.WORLD} charKey={CharacterEnum.MECH_1} />
                 </Col>
             </Row>
         </Container>
