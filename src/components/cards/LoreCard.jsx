@@ -21,6 +21,7 @@ function LoreCard(props) {
             <LoreCardExpanded
                 show={expand}
                 onHide={() => setExpand(false)}
+                charKey={props.charKey}
                 {...props}
             />
         </>

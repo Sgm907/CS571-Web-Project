@@ -3,6 +3,7 @@ import { Button, Container, Form, Row, Col, Pagination } from "react-bootstrap";
 import LoreTypes from "../enums/VariantEnum";
 import LoreCard from "../components/cards/LoreCard";
 import Style from "../SiteThemes";
+import CharacterEnum from "../enums/CharacterEnum";
 
 function LorePage() {
     return (
@@ -10,27 +11,27 @@ function LorePage() {
             <Row id="cards">
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="Enemy 1" text="This guy walks through ." imageSrc="src\assets\card1.png" type={LoreTypes.ENEMY} />
+                        <LoreCard title="The Kingdom" text="The world we're trying to save." imageSrc="src\assets\card1.png" type={LoreTypes.WORLD} charKey={CharacterEnum.WORLD_1} />
                     </div>
-                    <LoreCard title="Enemy 2" text="This guy is really strong." imageSrc="src\assets\card2.png" type={LoreTypes.ENEMY} />
+                    <LoreCard title="The Void" text="Once there was only the void." imageSrc="src\assets\card2.png" type={LoreTypes.WORLD} charKey={CharacterEnum.WORLD_2} />
                 </Col>
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="Enemy 3" text="This guy has a special ability." imageSrc="src\assets\card3.png" type={LoreTypes.ENEMY} />
+                        <LoreCard title="The Protagonist" text="You" imageSrc="src\assets\card3.png" type={LoreTypes.ALLY} charKey={CharacterEnum.MAIN_CHAR} />
                     </div>
-                    <LoreCard title="Enemy 4" text="This guy is very fast." imageSrc="src\assets\card4.png" type={LoreTypes.ENEMY} />
+                    <LoreCard title="The Antagonist" text="The man who destroyed the world" imageSrc="src\assets\card4.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.MAIN_ANT} />
                 </Col>
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="World 1" text="This is the starting kingdom." imageSrc="src\assets\card5.png" type={LoreTypes.WORLD} />
+                        <LoreCard title="Wolves" text="The local wildlife." imageSrc="src\assets\card5.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_1} />
                     </div>
-                    <LoreCard title="World 2" text="This is the second world." imageSrc="src\assets\card6.png" type={LoreTypes.WORLD} />
+                    <LoreCard title="Void Cultists" text="Followers of the void." imageSrc="src\assets\card6.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_2} />
                 </Col>
                 <Col>
                     <div className="mb-4">
-                        <LoreCard title="World 3" text="This is the third world." imageSrc="src\assets\card7.png" type={LoreTypes.WORLD} />
+                        <LoreCard title="Void Bats" text="Flying horrors from the sky." imageSrc="src\assets\card7.png" type={LoreTypes.ENEMY} charKey={CharacterEnum.ENEMY_3} />
                     </div>
-                    <LoreCard title="World 4" text="This is the fourth world." imageSrc="src\assets\card8.png" type={LoreTypes.WORLD} />
+                    <LoreCard title="Void Tunnels" text="Cross the ruined world." imageSrc="src\assets\card8.png" type={LoreTypes.WORLD} charKey={CharacterEnum.MECH_1} />
                 </Col>
             </Row>
         </Container>

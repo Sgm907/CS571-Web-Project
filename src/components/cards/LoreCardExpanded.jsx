@@ -1,31 +1,48 @@
 import { React } from 'react';
-import { Card, Row, Col, Image, Button, Modal } from 'react-bootstrap';
+import { Row, Col, Image, Modal } from 'react-bootstrap';
+import Style from '../../SiteThemes';
+import LoreData from '../misc/LoreData';
 
 function LoreCardExpanded(props) {
+    const selectedCharacter = LoreData.find((char) => char.key === props.charKey) ?? LoreData[0];
+    const imageSource = selectedCharacter.imgSrc || props.imageSrc;
+
     return (
-        <Modal show={props.show} onHide={props.onHide} fullscreen>
-            <Modal.Header closeButton>
-                <Modal.Title>{props.title}</Modal.Title>
+        <Modal
+            show={props.show}
+            onHide={props.onHide}
+            centered
+            style={Style.LoreModalDialog}
+            contentClassName="border-0"
+            dialogClassName="rounded-4"
+        >
+            <Modal.Header
+                closeButton
+                closeVariant="white"
+                style={Style.LoreModal}
+            >
+                <Modal.Title style={Style.LoreModalTitle}>{selectedCharacter.title}</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-                < Row className="g-0">
+            <Modal.Body style={Style.LoreModalBody}>
+                <Row className="g-4 align-items-center">
                     <Col md={4}>
                         <Image
-                            src={props.imageSrc}
-                            alt={props.title}
+                            src={imageSource}
+                            alt={selectedCharacter.title}
+                            fluid
+                            rounded
+                            style={Style.LoreModalImage}
                         />
                     </Col>
                     <Col md={8}>
-                        <div>
-                            {props.title}
+                        <div style={Style.LoreModalText}>
+                            {selectedCharacter.desc}
                         </div>
-                        <div>Currently this just displays the information from the LoreCard component.  I will also update this display to have more info when I create real values</div>
                     </Col>
                 </Row>
             </Modal.Body>
         </Modal>
     );
 }
-
 
 export default LoreCardExpanded;
