@@ -64,8 +64,7 @@ const SiteThemes = {
         color: "white",
         textAlign: "center",
         width: "100%",
-        fontSize: "2rem",
-        color: "#d6ffb8"
+        fontSize: "2rem"
     },
 
     LoreModalImage: {

@@ -12,12 +12,12 @@ function SiteOutline() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/CS571-Web-Project/" element={<SiteNavigation />}>
+        <Route path="/" element={<SiteNavigation />}>
           <Route index element={<LandingPage />} />
-          <Route path="/CS571-Web-Project/about" element={<AboutPage />} />
-          <Route path="/CS571-Web-Project/feedback" element={<FeedbackPage />} />
-          <Route path="/CS571-Web-Project/lore" element={<LorePage />} />
-          <Route path="/CS571-Web-Project/roadmap" element={<RoadmapPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
+          <Route path="/lore" element={<LorePage />} />
+          <Route path="/roadmap" element={<RoadmapPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
