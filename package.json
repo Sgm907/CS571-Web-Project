@@ -2,7 +2,7 @@
   "name": "Web Project",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://Sgm907.github.io/CS571-Web-Project/",
+  "homepage": "https://Sgm907.github.io/CS571-Web-Project",
   "type": "module",
   "scripts": {
     "dev": "vite",
