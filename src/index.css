@@ -1,27 +1,230 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 1rem;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-html {
-  margin: 1rem;
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(157, 226, 58, 0.08) 0%, transparent 22%),
+    linear-gradient(180deg, #4a1a4a 0%, #2a0d3a 35%, #120112 100%);
+  background-blend-mode: screen;
+  color: #fff2fb;
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-li:hover {
-  cursor: pointer;
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px);
+  background-size: 72px 72px, 100% 4px;
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  z-index: -1;
 }
 
-:root {
-  --bs-body-bg: beige;
-  /* Change this hex code to your preferred default background */
+#homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.site-navbar {
+  background: linear-gradient(90deg, rgba(22, 0, 29, 0.95), rgba(19, 62, 43, 0.95));
+  border-bottom: 1px solid rgba(91, 211, 122, 0.55);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.site-navbar .navbar-brand {
+  color: #9de23a !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 0.4rem rgba(157, 226, 58, 0.22);
+}
+
+.site-navbar .nav-link {
+  color: #f4f7ff !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+  color: #9de23a !important;
+  text-shadow: 0 0 0.35rem rgba(157, 226, 58, 0.35);
+}
+
+.site-navbar .navbar-toggler {
+  border-color: rgba(91, 211, 122, 0.7);
+}
+
+.site-navbar .navbar-toggler-icon {
+  filter: invert(0.9) sepia(0.3) saturate(4) hue-rotate(160deg);
+}
+
+#homePage h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+#homePage p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border-radius: 0.9rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid #5bd37a;
+  color: #07140a;
+  box-shadow: 0 6px 18px #9de23a2e;
+}
+
+.btn-selected {
+  background-color: #21a50f;
+}
+
+.btn-tab {
+  background-color: #3d5c12;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background-color: #21a50f;
+}
+
+.card,
+.form-card {
+  background: #ffffff0a;
+  border: 1px solid #5bd37a;
+  box-shadow: 0 10px 24px #00000047;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #9de23a;
+  text-shadow: 0 0 0.5rem #9de23a47;
+}
+
+/* default inputs (page-level) */
+input,
+textarea,
+select {
+  background: #ffffff0f;
+  border: 1px solid #5bd37a;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.6rem;
+}
+
+/* inputs inside green-themed forms */
+.submit-form input,
+.submit-form textarea,
+.submit-form select {
+  background: lightgrey;
+  border: 1px solid #5bd37a;
+  color: black;
+}
+
+/* focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #3be0a6;
+  box-shadow: 0 0 0 3px rgba(59, 224, 166, 0.18);
+}
+
+/* override focus for green form inputs */
+.submit-form {
+  border-color: #3be0a6;
+  box-shadow: 0 0 0 3px rgba(59, 224, 166, 0.18);
+}
+
+/* green-themed form container (matches SiteThemes.DefaultForm) */
+.submit-form {
+  background-color: #153e2b;
+  border: 2px solid #5bd37ae6;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px #9de23a1f, 0 12px 30px #00000059;
+  padding: 2rem;
+  text-align: left;
+  color: #f6f8ef;
+}
+
+/* buttons inside green-themed forms */
+
+.roadmap-card {
+  background: #ffffff0f;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  box-shadow: 0 12px 28px #0000003d;
+}
+
+.roadmap-card-complete {
+  background-color: #3ae2cc29;
+  border-color: #5bc5d373;
+}
+
+.roadmap-card-in-progress {
+  background-color: #ffbc5329;
+  border-color: #ffbc5373;
+}
+
+.roadmap-card-future {
+  background-color: #b86fe029;
+  border-color: #b86fe073;
+}
+
+.lore-card-ally {
+  background-color: rgba(88, 161, 255, 0.65);
+  border-color: rgba(88, 161, 255, 0.85);
+}
+
+.lore-card-ally:hover {
+  transform: translateY(-5px);
+  background-color: rgb(88, 161, 255);
+}
+
+
+.lore-card-enemy {
+  background-color: rgba(146, 78, 255, 0.65);
+  border-color: rgba(146, 78, 255, 0.85);
+}
+
+.lore-card-enemy:hover {
+  transform: translateY(-5px);
+  background-color: rgb(146, 78, 255);
+}
+
+.lore-card-world {
+  background-color: rgba(255, 88, 88, 0.65);
+  border-color: rgba(255, 88, 88, 0.85);
+}
+
+.lore-card-world:hover {
+  transform: translateY(-5px);
+  background-color: rgb(255, 88, 88);
+}
+
+.roadmap-card .card-header,
+.roadmap-card .card-footer {
+  background: transparent;
+  border: none;
+}
+
+.roadmap-card-footer small {
+  color: #f4f7ff;
 }

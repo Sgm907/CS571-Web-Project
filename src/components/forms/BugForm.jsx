@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import Style from '../../SiteThemes';
+import FeedbackEnum from "../../enums/FeedbackEnum";
 
 const BugForm = () => {
     const [validated, setValidated] = useState(false);
+    let title = useRef(null);
+    let desc = useRef(null);
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -12,18 +15,32 @@ const BugForm = () => {
             event.stopPropagation();
         }
         else {
+            let bugList;
+            if (localStorage.getItem(FeedbackEnum.SUGGESTION) !== null) {
+                bugList = JSON.parse(localStorage.getItem(FeedbackEnum.SUGGESTION));
+            }
+            else {
+                bugList = [];
+            }
+            let bug = {
+                type: FeedbackEnum.BUG,
+                title: title.current.value,
+                description: desc.current.value
+            }
+            bugList.push(bug);
+            localStorage.setItem(FeedbackEnum.SUGGESTION, JSON.stringify(bugList));
             alert("Thank you for your submission! We will review your bug report and get back to you as soon as possible.");
         }
         setValidated(true);
 
     };
     return (
-        <div style={Style.DefaultForm}>
+        <div class="submit-form" style={Style.Form}>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="titleFormGroup">
                         <Form.Label>Title</Form.Label>
-                        <Form.Control required placeholder="Enter title" />
+                        <Form.Control required placeholder="Enter title" ref={title} />
                         <Form.Control.Feedback type="invalid">Please enter a title.</Form.Control.Feedback>
                     </Form.Group>
 
@@ -34,7 +51,7 @@ const BugForm = () => {
                             <Form.Control.Feedback type="invalid">Please enter a username.</Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group required as={Col} controlId="versionForm">
-                            <div style={{ backgroundColor: "darkgrey", padding: "2rem", borderRadius: "0.5rem" }}>
+                            <div style={{ padding: "1rem" }}>
                                 <Form.Check
                                     defaultChecked
                                     type="radio"
@@ -61,11 +78,11 @@ const BugForm = () => {
 
                 <Form.Group className="mb-3" controlId="issueDescriptionGroup">
                     <Form.Label>Issue Description</Form.Label>
-                    <Form.Control required as="textarea" rows={3} placeholder="Describe the issue you encountered" />
+                    <Form.Control required as="textarea" rows={3} placeholder="Describe the issue you encountered" ref={desc} />
                     <Form.Control.Feedback type="invalid">Please add as much information as possible.</Form.Control.Feedback>
                 </Form.Group>
 
-                <Button variant="primary" type="submit" >
+                <Button variant="selected" type="submit">
                     Submit
                 </Button>
             </Form>

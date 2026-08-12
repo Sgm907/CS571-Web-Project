@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Row, Col, Text, Image, Button, Modal } from 'react-bootstrap';
+import { React } from 'react';
+import { Card, Row, Col, Image, Button, Modal } from 'react-bootstrap';
 
 function LoreCardExpanded(props) {
     return (
@@ -16,10 +16,10 @@ function LoreCardExpanded(props) {
                         />
                     </Col>
                     <Col md={8}>
-                        <Text>
+                        <div>
                             {props.title}
-                        </Text>
-                        <Text>Currently this just displays the information from the LoreCard component.  I will also update this display to have more info when I create real values</Text>
+                        </div>
+                        <div>Currently this just displays the information from the LoreCard component.  I will also update this display to have more info when I create real values</div>
                     </Col>
                 </Row>
             </Modal.Body>

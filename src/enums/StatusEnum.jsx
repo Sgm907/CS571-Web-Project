@@ -1,7 +1,7 @@
 const StatusEnum = {
-    NOT_STARTED: "not-started",
-    IN_PROGRESS: "in-progress",
-    COMPLETE: "complete"
+    FUTURE: "roadmap-card-future",
+    IN_PROGRESS: "roadmap-card-in-progress",
+    COMPLETE: "roadmap-card-complete"
 }
 Object.freeze(StatusEnum);
 export default StatusEnum;
