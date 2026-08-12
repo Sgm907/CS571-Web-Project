@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { HashRouter, Route, Routes } from 'react-router';
 
 import LandingPage from './../pages/LandingPage';
 import AboutPage from './../pages/AboutPage';
@@ -10,7 +10,7 @@ import SiteNavigation from './SiteNavigation';
 
 function SiteOutline() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/CS571-Web-Project/" element={<SiteNavigation />}>
           <Route index element={<LandingPage />} />
@@ -21,7 +21,7 @@ function SiteOutline() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
