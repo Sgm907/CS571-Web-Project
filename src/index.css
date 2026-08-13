@@ -222,35 +222,64 @@ select:focus {
   border-color: #b86fe073;
 }
 
+.lore-card {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px #0000003d;
+  color: #f6f8ef;
+  padding: 0;
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.lore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px #0000004d;
+  filter: brightness(0.92);
+}
+
+.lore-card .card {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+.lore-card .card-body {
+  background: transparent;
+  color: inherit;
+}
+
+.lore-card .card-title,
+.lore-card .card-text {
+  color: inherit;
+}
+
 .lore-card-ally {
-  background-color: rgba(88, 161, 255, 0.65);
-  border-color: rgba(88, 161, 255, 0.85);
+  background-color: rgba(58, 226, 204, 0.34);
+  border-color: rgba(91, 197, 211, 0.72);
 }
 
 .lore-card-ally:hover {
-  transform: translateY(-5px);
-  background-color: rgb(88, 161, 255);
+  background-color: rgba(16, 118, 110, 0.7);
 }
 
-
 .lore-card-enemy {
-  background-color: rgba(146, 78, 255, 0.65);
-  border-color: rgba(146, 78, 255, 0.85);
+  background-color: rgba(184, 111, 224, 0.34);
+  border-color: rgba(184, 111, 224, 0.74);
 }
 
 .lore-card-enemy:hover {
-  transform: translateY(-5px);
-  background-color: rgb(146, 78, 255);
+  background-color: rgba(96, 52, 128, 0.72);
 }
 
 .lore-card-world {
-  background-color: rgba(255, 88, 88, 0.65);
-  border-color: rgba(255, 88, 88, 0.85);
+  background-color: rgba(255, 188, 83, 0.28);
+  border-color: rgba(255, 188, 83, 0.7);
 }
 
 .lore-card-world:hover {
-  transform: translateY(-5px);
-  background-color: rgb(255, 88, 88);
+  background-color: rgba(196, 123, 20, 0.48);
 }
 
 .roadmap-card .card-header,
