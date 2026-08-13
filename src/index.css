@@ -74,6 +74,20 @@ body::before {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
+.site-navbar .container {
+  margin-left: 0;
+  padding-left: 5rem;
+  justify-content: flex-start;
+}
+
+.site-navbar .navbar-collapse {
+  justify-content: flex-start;
+}
+
+.site-navbar .navbar-nav {
+  margin-left: 0;
+}
+
 .site-navbar .navbar-brand {
   color: #9de23a !important;
   font-weight: 700;

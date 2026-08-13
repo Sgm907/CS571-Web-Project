@@ -48,7 +48,7 @@ const RoadmapPage = () => {
             <Col className="border-end border-secondary">
                 {
                     suggestions.filter((suggestion) => suggestion.type === FeedbackEnum.FEEDBACK).map((suggestion) => {
-                        return <RoadmapCard title={suggestion.title} description={suggestion.description} progress="0" type={StatusEnum.IN_PROGRESS} key={suggestion.title} />
+                        return <RoadmapCard title={suggestion.title} description={suggestion.description} progress={(Math.random() * 100).toFixed(2)} type={StatusEnum.IN_PROGRESS} key={suggestion.title} />
                     })
                 }
             </Col>
