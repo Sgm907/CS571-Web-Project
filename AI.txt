@@ -1,1 +1,1 @@
-I used Copilot for auto completions while coding.  I at no point used the chat feature for programming.  ~5% AI
+I used Copilot for auto completions while coding the JSX.  For the CSS I created a base file that had the general look I liked, and then had CoPilot quickly iterate different color schemes & effects from that file.  ~15% AI
